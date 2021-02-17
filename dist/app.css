@@ -4,6 +4,17 @@
   margin: 0;
 }
 
-#app {
+#container {
   min-width: 1200px;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+#container .header {
+  background: #101010;
+}
+#container .header-row-1 i {
+  color: #009cff;
+}
+#container .header-row-2 {
+  color: #fff;
 }

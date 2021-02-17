@@ -1,9 +1,31 @@
+$font: 'Lato';
+$blue-color: #009cff;
+
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
 }
+body {
 
-#app {
+}
+
+#container {
   min-width: 1200px;
+  max-width: 1600px;
+  margin: 0 auto;
+
+  .header {
+    background: #101010;
+
+    &-row-1 {
+      i {
+        color: $blue-color;
+      }
+    }
+
+    &-row-2 {
+      color: #fff;
+    }
+  }
 }
