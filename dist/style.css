@@ -1,0 +1,314 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  font-size: 14px;
+  font-family: "Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif;
+  line-height: 1.35;
+  color: #333;
+}
+
+#app {
+  min-height: 100%;
+  background: #ccc;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+h1 {
+  font-weight: 400;
+}
+
+h2 {
+  font-weight: 400;
+}
+
+h3 {
+  font-weight: 400;
+}
+
+h4 {
+  font-weight: 400;
+}
+
+h5 {
+  font-weight: 400;
+}
+
+h6 {
+  font-weight: 400;
+}
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.no-select {
+  text-transform: uppercase;
+  color: #989898;
+}
+
+.p-r {
+  position: relative;
+}
+
+.p-a {
+  position: absolute;
+}
+
+.btn {
+  display: inline-block;
+  min-width: 150px;
+  min-height: 35px;
+  cursor: pointer;
+}
+
+header {
+  background-color: #101010;
+}
+header nav {
+  text-transform: capitalize;
+}
+header nav.nav-top ul {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 46px;
+  color: #989898;
+}
+header nav.nav-top ul li {
+  margin-right: 25px;
+  font-size: 0.85em;
+  line-height: 46px;
+}
+header nav.nav-top ul li i {
+  color: #009cff;
+  margin-right: 5px;
+}
+header nav.nav-top ul li select {
+  width: 85px;
+  font-size: 1em;
+  cursor: pointer;
+}
+header nav.nav-top ul li:hover span {
+  color: #fff;
+  text-decoration: underline;
+}
+header nav.nav-bottom ul {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 50px;
+  color: #fff;
+}
+header nav.nav-bottom ul .logo {
+  width: 120px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header nav.nav-bottom ul .logo img {
+  width: 90px;
+}
+header nav.nav-bottom ul > *:not(.logo) {
+  padding: 13px 25px 15px;
+  cursor: pointer;
+}
+header nav.nav-bottom ul > *:not(.logo):hover {
+  background: #f1f1f1;
+  color: #000;
+}
+header nav.nav-bottom ul .drop-down {
+  position: relative;
+  cursor: pointer;
+}
+header nav.nav-bottom ul .drop-down::after {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 600;
+  font-size: 9px;
+  content: "\f078";
+  color: #878787;
+  vertical-align: middle;
+  margin-left: 0.25em;
+}
+header nav.nav-bottom ul .drop-down:hover {
+  background: #f1f1f1;
+  border-bottom: none;
+}
+header nav.nav-bottom ul .drop-down:hover .dropped {
+  display: block;
+}
+header nav.nav-bottom ul .drop-down .dropped {
+  background: #f1f1f1;
+  display: none;
+  position: absolute;
+  z-index: 10;
+  top: 100%;
+  left: 0;
+  min-width: 220px;
+}
+header nav.nav-bottom ul .drop-down .dropped > * {
+  line-height: 46px;
+  padding: 0 13px;
+  color: #333;
+  text-transform: capitalize;
+}
+header nav.nav-bottom ul .drop-down .dropped > *:hover {
+  background: #e6e6e6;
+}
+
+.jumbotron {
+  height: 460px;
+  padding-top: 20px;
+  background-image: url("../img/hero.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.jumbotron .container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.jumbotron .container .box-middle {
+  width: 44.4444444444%;
+  padding: 0 15px;
+}
+.jumbotron .container .box-middle h1 {
+  font-size: 29.4px;
+}
+.jumbotron .container .box-middle h2 {
+  font-size: 21px;
+  margin: 10px 0 15px;
+}
+.jumbotron .container .box-middle ul {
+  margin: 25px 0 35px;
+}
+.jumbotron .container .box-middle ul li {
+  font-size: 16.8px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.7em;
+}
+.jumbotron .container .box-middle ul li::before {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 600;
+  font-size: 70%;
+  content: "\f054";
+  color: #878787;
+  line-height: 100%;
+  margin: 0 10px 0 5px;
+}
+.jumbotron .container .box-middle .btn-download {
+  border: 2px solid;
+  padding: 9px 90px 10px 20px;
+  width: 250px;
+  line-height: 1;
+}
+.jumbotron .container .box-middle .btn-download .p-a {
+  transform: translateY(-50%);
+  top: 50%;
+  right: 20px;
+  font-size: 2em;
+}
+.jumbotron .container .box-middle .btn-download h5 {
+  font-size: 1rem;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+.jumbotron .container .box-middle .btn-download h6 {
+  font-size: 1rem;
+  text-transform: capitalize;
+  margin-top: 5px;
+}
+.jumbotron .container .box-right {
+  width: 33.3333333333%;
+  height: 440px;
+  background: rgba(0, 0, 0, 0.9);
+  padding: 55px 20px 20px;
+  text-transform: capitalize;
+}
+.jumbotron .container .box-right > :nth-child(1) {
+  margin-bottom: 0.8rem;
+}
+.jumbotron .container .box-right > :nth-child(2) {
+  margin-bottom: 1.6rem;
+}
+.jumbotron .container .box-right > :nth-child(3) {
+  margin-bottom: 2.4rem;
+}
+.jumbotron .container .box-right .price {
+  color: #fff;
+  font-size: 26px;
+  line-height: 1em;
+}
+.jumbotron .container .box-right .price .p-a {
+  transform: translateY(-50%);
+  top: 50%;
+  right: -0.7rem;
+}
+.jumbotron .container .box-right .btn-blue {
+  color: #fff;
+  background: #009cff;
+  border: 1px solid #009cff;
+  font-size: 15px;
+  line-height: 35px;
+  text-align: center;
+  text-transform: uppercase;
+}
+.jumbotron .container .box-right .time {
+  background: #f6f6f6;
+  padding: 10px 10px 10px 15px;
+}
+.jumbotron .container .box-right .time .title {
+  color: #2c2c2c;
+  font-size: 18px;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+.jumbotron .container .box-right .time p {
+  margin-top: 3px;
+  text-transform: capitalize;
+}
+.jumbotron .container .box-right .time p span {
+  text-transform: uppercase;
+}
+.jumbotron .container .box-right .time p a {
+  color: #009cff;
+}
+
+nav.product {
+  background: #e6e6e6;
+  line-height: 60px;
+}
+nav.product ul {
+  display: flex;
+  justify-content: center;
+  text-transform: capitalize;
+  font-size: 1.29em;
+}
+nav.product ul li {
+  padding: 0 24px;
+  cursor: pointer;
+}
+nav.product ul li:first-child {
+  border-bottom: 3px solid #000;
+  font-weight: 500;
+}
+nav.product ul li:hover {
+  background: #eee;
+}

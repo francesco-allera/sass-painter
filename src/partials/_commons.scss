@@ -1,0 +1,34 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    font-size: $font-size;
+    font-family: $font-family;
+    line-height: 1.35;
+    color: $c-font;
+}
+
+#app {
+    min-height: 100%;
+    background: $bg-app;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+@for $h from 1 to 7 {
+    h#{$h} {
+        font-weight: 400;
+    }
+}

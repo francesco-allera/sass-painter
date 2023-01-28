@@ -1,0 +1,286 @@
+@import "./partials/_font";
+@import "./partials/_colors";
+@import "./partials/_commons";
+@import "./partials/_utility";
+
+header {
+    background-color: $bg-header;
+
+    nav {
+        text-transform: capitalize;
+
+        &.nav-top {
+            ul {
+                $height: 46px;
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+                height: $height;
+                color: $c-grey;
+
+                li {
+                    margin-right: 25px;
+                    font-size: .85em;
+                    line-height: $height;
+
+                    i {
+                        color: $c-blue;
+                        margin-right: 5px;
+                    }
+
+                    select {
+                        width: 85px;
+                        font-size: 1em;
+                        cursor: pointer;
+                    }
+
+                    &:hover span {
+                        color: $c-white;
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+
+        &.nav-bottom {
+            ul {
+                $height: 50px;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                height: $height;
+                color: $c-white;
+
+                .logo {
+                    width: 120px;
+                    height: 50px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    img {
+                        width: 90px;
+                    }
+                }
+
+                > *:not(.logo) {
+                    padding: 13px 25px 15px;
+                    cursor: pointer;
+
+                    &:hover {
+                        background: $bg-dropdown;
+                        color: $c-black;
+                    }
+                }
+
+                .drop-down {
+                    position: relative;
+                    cursor: pointer;
+
+                    &::after {
+                        font-family: "Font Awesome 6 Free";
+                        font-weight: 600;
+                        font-size: 9px;
+                        content: "\f078";
+                        color: $c-dropdown-after;
+                        vertical-align: middle;
+                        margin-left: 0.25em;
+                    }
+
+                    &:hover {
+                        background: $bg-dropdown;
+                        border-bottom: none;
+
+                        .dropped {
+                            display: block;
+                        }
+                    }
+
+                    .dropped {
+                        background: $bg-dropdown;
+                        display: none;
+                        position: absolute;
+                        z-index: 10;
+                        top: 100%;
+                        left: 0;
+                        min-width: 220px;
+
+                        > * {
+                            line-height: 46px;
+                            padding: 0 13px;
+                            color: $c-font;
+                            text-transform: capitalize;
+
+                            &:hover {
+                                background: $bg-light;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.jumbotron {
+    height: 460px;
+    padding-top: 20px;
+    background-image: url("../img/hero.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+
+        .box-middle {
+            width: calc((100% / 12 * 8) / 12 * 8);
+            padding: 0 15px;
+
+            h1 {
+                font-size: 29.4px;
+            }
+            h2 {
+                font-size: 21px;
+                margin: 10px 0 15px;
+            }
+
+            ul {
+                margin: 25px 0 35px;
+
+                li {
+                    font-size: 16.8px;
+                    display: flex;
+                    align-items: center;
+                    margin-bottom: .7em;
+
+                    &::before {
+                        font-family: "Font Awesome 6 Free";
+                        font-weight: 600;
+                        font-size: 70%;
+                        content: "\f054";
+                        color: $c-dropdown-after;
+                        line-height: 100%;
+                        margin: 0 10px 0 5px;
+                    }
+                }
+            }
+
+            .btn-download {
+                border: 2px solid;
+                padding: 9px 90px 10px 20px;
+                width: 250px;
+                line-height: 1;
+
+                .p-a {
+                    transform: translateY(-50%);
+                    top: 50%;
+                    right: 20px;
+                    font-size: 2em;
+                }
+
+                h5 {
+                    font-size: 1rem;
+                    font-weight: 500;
+                    text-transform: uppercase;
+                }
+
+                h6 {
+                    font-size: 1rem;
+                    text-transform: capitalize;
+                    margin-top: 5px;
+                }
+            }
+        }
+
+        .box-right {
+            width: calc(100% / 12 * 4);
+            height: 440px;
+            background: rgba(0,0,0,.9);
+            padding: 55px 20px 20px;
+            text-transform: capitalize;
+
+            @for $i from 1 to 4 {
+                > :nth-child(#{$i}) {
+                    margin-bottom: .8rem * $i;
+                }
+            }
+
+            .price {
+                color: $c-white;
+                font-size: 26px;
+                line-height: 1em;
+
+                .p-a {
+                    transform: translateY(-50%);
+                    top: 50%;
+                    right: -.7rem;
+
+                }
+            }
+
+            .btn-blue {
+                color: $c-white;
+                background: $c-blue;
+                border: 1px solid $c-blue;
+                font-size: 15px;
+                line-height: 35px;
+                text-align: center;
+                text-transform: uppercase;
+            }
+
+            .time {
+                background: $bg-time;
+                padding: 10px 10px 10px 15px;
+
+                .title {
+                    color: $c-dark;
+                    font-size: 18px;
+                    text-transform: uppercase;
+                    font-weight: 500;
+                }
+
+                p {
+                    margin-top: 3px;
+                    text-transform: capitalize;
+
+                    span {
+                        text-transform: uppercase;
+                    }
+
+                    a {
+                        color: $c-blue;
+                    }
+                }
+            }
+        }
+    }
+}
+
+nav.product {
+    background: $bg-light;
+    line-height: 60px;
+
+    ul {
+        display: flex;
+        justify-content: center;
+        text-transform: capitalize;
+        font-size: 1.29em;
+
+        li {
+            padding: 0 24px;
+            cursor: pointer;
+
+            &:first-child {
+                border-bottom: 3px solid #000;
+                font-weight: 500;
+            }
+
+            &:hover {
+                background: $bg-lighter;
+            }
+        }
+    }
+}

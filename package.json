@@ -1,0 +1,17 @@
+{
+  "name": "44-sass-painter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "laravel-mix": "^6.0.49",
+    "sass": "^1.54.8",
+    "sass-loader": "^12.1.0"
+  }
+}
